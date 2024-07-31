@@ -36,16 +36,17 @@ const SignUp = () => {
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     try {
+      setEmail("");
+      setPassword("");
+      setFullName("");
       const response = await instance.post("/auth/register", {
         full_name: fullName,
         email,
         password,
       });
-      // Handle successful sign up
       console.log("Sign up successful:", response.data);
-      // Redirect or show a success message
+      router.push("/signin");
     } catch (error: AxiosError | any) {
-      // Handle sign up error
       console.error("Sign up error:", error.response?.data || error.message);
     }
   };
