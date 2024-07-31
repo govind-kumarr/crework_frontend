@@ -4,6 +4,7 @@ import React, { FormEvent, useEffect, useState } from "react";
 import { instance } from "../axiosConfig";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
+import Spinner from "../_components/Spinner";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -48,7 +49,14 @@ const SignIn = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="relative h-screen w-screen">
+        <div className="flex items-center absolute top-1/2 left-1/2 gap-4 -translate-x-1/2 -translate-y-1/2">
+          <p className="text-2xl self-end mt-2">Loading...</p>
+          <Spinner />
+        </div>
+      </div>
+    );
   }
 
   if (isAuthenticated) {
