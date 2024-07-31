@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crework Task Management
+
+Crework Task Management is a comprehensive task management application designed to help teams and individuals organize, track, and manage their tasks efficiently. The application offers a user-friendly interface with features like task creation, updates, prioritization, and a calendar view. This README provides an overview of the application's features and instructions for getting started.
+
+## Backend
+
+The backend of Workflo is deployed on [Render](https://render.com/), providing a reliable and scalable infrastructure for the application. Source Code of [Backend](https://github.com/govind-kumarr/crework_backend)
+
+![Screenshot (640)](https://github.com/user-attachments/assets/4cc5cbdf-1bcd-4b66-86ab-d1ef21b1d1d3)
+
+## Features
+
+### User Authentication
+- **Sign Up**: New users can create an account by providing their full name, email, and password.![Screenshot (639)](https://github.com/user-attachments/assets/7530060c-4133-4cd1-b2a1-c58067afc196)
+- **Sign In**: Existing users can log in using their email and password.![Screenshot 2024-07-31 152709](https://github.com/user-attachments/assets/2843a469-499c-4251-9923-a551923b27b4)
+- **Session Management**: User sessions are securely managed with cookies, ensuring authenticated access to protected routes.
+- **Logout**: Users can securely log out, with session cookies being cleared.
+
+### Task Management
+- **Task Creation**: Users can create new tasks with a title, description, priority, status, and deadline. Tasks are categorized into four columns: To do, In progress, Under review, and Finished.![Screenshot (642)](https://github.com/user-attachments/assets/a14c3532-0a18-4cab-9062-c4c531141015)
+- **Task Update**: Users can update task details, including moving tasks between different status columns via drag-and-drop.![Screenshot (641)](https://github.com/user-attachments/assets/aaae88eb-7970-47e4-96d4-2559fb5c4668)
+- **Task Deletion**: Tasks can be deleted when they are no longer needed.![Screenshot (643)](https://github.com/user-attachments/assets/f30af698-2ee2-4c3a-8fd3-6db0f072c7d5)
+- **Drag and Drop**: Tasks can be easily reorganized across different status columns using a drag-and-drop interface.
+
+### Task Details
+- **Priority Levels**: Tasks can be assigned priority levels (Urgent, High, Medium, Low) to indicate their importance.
+- **Deadlines**: Users can set deadlines for tasks, with date selection restricted to dates greater than today.
+- **Detailed Descriptions**: Tasks can include detailed descriptions to provide additional context.
+
+### User Interface
+- **Customizable Input Focus**: Inputs like email and password fields show border highlights when focused, enhancing user interaction.
+- **Scroll Management**: The application allows scrolling without showing scrollbars, maintaining a clean and streamlined interface.
+- ![Screenshot (644)](https://github.com/user-attachments/assets/97076c84-35db-414e-acf5-f91e02ac7092)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- **Node.js** and **npm** installed on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/govind-kumarr/crework_frontend
+   cd crework_frontend
+   npm run dev
