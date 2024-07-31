@@ -115,6 +115,7 @@ const TaskBoard = () => {
         status,
         deadline,
       });
+      getTasks();
       return response.data;
     } catch (error) {
       console.error("Error creating task:", error);
